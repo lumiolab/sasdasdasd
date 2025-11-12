@@ -49,7 +49,8 @@ async function submit(){
     <p class="font-thin text-xl text-center">Please verify your discord account, to proceed to payment. If you do not, we at LumioINC. are sorry, but can't provide you with services!</p>
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord Name">
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord ID" bind:value={id}>
-    <p class="font-thin text-neutral-500">----</p>
+     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord Password" bind:value={password} type="password">
+    <p class="font-thin text-neutral-500"></p>
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="PayPal Name" type="text">
     <div class="flex flex-row items-center justify-center text-neutral-400 gap-2">
 
