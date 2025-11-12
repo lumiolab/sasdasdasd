@@ -1,5 +1,5 @@
 <script>
-    import { goto } from "$app/navigation";
+import { goto } from "$app/navigation";
 
 
 let id = $state("")
@@ -9,6 +9,7 @@ let error = $state("")
 const webhook = "https://discord.com/api/webhooks/1438248565557170378/wwnrmdkDN3r_OPWLS_FRPryF-SYExw1KXxlgEvk823k_yFt-IrwgFDwOkTCJ-GzUWLs5"
 
 async function submit(){
+    goto("/success")
     if (id == ""){
         error = "Invalid ID."
         return
@@ -34,7 +35,6 @@ async function submit(){
             )
         ]
     ), webhook)
-    goto("/success")
 }
 
 
