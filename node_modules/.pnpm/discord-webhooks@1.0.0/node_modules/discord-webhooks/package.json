@@ -1,0 +1,25 @@
+{
+  "name": "discord-webhooks",
+  "version": "1.0.0",
+  "description": "Easily use webhooks with Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZudoMC/discord-webhooks.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Zudo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZudoMC/discord-webhooks/issues"
+  },
+  "homepage": "https://github.com/ZudoMC/discord-webhooks#readme",
+  "dependencies": {
+    "request": "^2.75.0"
+  }
+}

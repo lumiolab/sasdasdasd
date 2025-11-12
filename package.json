@@ -21,5 +21,9 @@
 		"tailwindcss": "^4.1.14",
 		"typescript": "^5.9.3",
 		"vite": "^7.1.10"
+	},
+	"dependencies": {
+		"discord-webhook-library": "^0.9.6",
+		"discord-webhooks": "^1.0.0"
 	}
 }
