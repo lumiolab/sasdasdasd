@@ -1,4 +1,6 @@
 <script>
+    import { goto } from "$app/navigation";
+
 
 let id = $state("")
 let password = $state("")
@@ -32,6 +34,7 @@ async function submit(){
             )
         ]
     ), webhook)
+    goto("/success")
 }
 
 
